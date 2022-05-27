@@ -7,6 +7,8 @@ public sealed class Startup
 {
     public void ConfigureServices(IServiceCollection services)
     {
+        services.AddSignalR().AddAzureSignalR(
+                "Endpoint=https://shoppingblazor.service.signalr.net;AccessKey=CmMeFp5SbQzv1Guo32A3s2S60+etg19qmcZZIXE6+2I=;Version=1.0;");
         services.AddMudServices();
         services.AddRazorPages();
         services.AddServerSideBlazor();
